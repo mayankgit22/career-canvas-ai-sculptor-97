@@ -1,5 +1,5 @@
-
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -24,32 +24,14 @@ import { RadarChart } from "@/components/RadarChart";
 import { AgentShowcase } from "@/components/AgentShowcase";
 import { FeatureCard } from "@/components/FeatureCard";
 import { TestimonialCard } from "@/components/TestimonialCard";
+import { Navigation } from "@/components/Navigation";
 
 const Index = () => {
   const [activeTab, setActiveTab] = useState("discovery");
 
   return (
     <div className="min-h-screen bg-background">
-      {/* Header */}
-      <header className="border-b border-border/40 backdrop-blur-sm sticky top-0 z-50 bg-background/80">
-        <div className="container mx-auto px-4 py-4">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center space-x-2">
-              <div className="w-8 h-8 gradient-bg rounded-lg flex items-center justify-center">
-                <Brain className="w-5 h-5 text-white" />
-              </div>
-              <span className="text-xl font-bold gradient-text">CareerCanvas</span>
-            </div>
-            <nav className="hidden md:flex items-center space-x-8">
-              <a href="#features" className="text-muted-foreground hover:text-foreground transition-colors">Features</a>
-              <a href="#agents" className="text-muted-foreground hover:text-foreground transition-colors">AI Agents</a>
-              <a href="#success" className="text-muted-foreground hover:text-foreground transition-colors">Success Stories</a>
-              <Button variant="outline" size="sm">Sign In</Button>
-              <Button size="sm" className="gradient-bg">Get Started</Button>
-            </nav>
-          </div>
-        </div>
-      </header>
+      <Navigation />
 
       {/* Hero Section */}
       <section className="py-20 px-4 gradient-bg text-white relative overflow-hidden">
@@ -68,10 +50,12 @@ const Index = () => {
               portfolios, and application materials—all powered by our 9-agent AI system.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Button size="lg" className="bg-white text-blue-600 hover:bg-blue-50 font-semibold px-8 py-4">
-                Start Building Your Career
-                <ChevronRight className="ml-2 w-5 h-5" />
-              </Button>
+              <Link to="/profile">
+                <Button size="lg" className="bg-white text-blue-600 hover:bg-blue-50 font-semibold px-8 py-4">
+                  Start Building Your Career
+                  <ChevronRight className="ml-2 w-5 h-5" />
+                </Button>
+              </Link>
               <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10 px-8 py-4">
                 Watch Demo
               </Button>
@@ -291,10 +275,12 @@ const Index = () => {
           </div>
 
           <div className="text-center mt-12">
-            <Button size="lg" className="gradient-bg">
-              Join 50,000+ Successful Students
-              <Rocket className="ml-2 w-5 h-5" />
-            </Button>
+            <Link to="/dashboard">
+              <Button size="lg" className="gradient-bg">
+                Join 50,000+ Successful Students
+                <Rocket className="ml-2 w-5 h-5" />
+              </Button>
+            </Link>
           </div>
         </div>
       </section>
