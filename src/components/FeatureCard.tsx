@@ -12,15 +12,15 @@ export const FeatureCard = ({
   description,
   active = false
 }: FeatureCardProps) => {
-  return <Card className={`transition-all duration-300 hover:shadow-lg hover:-translate-y-1 ${active ? "ring-2 ring-blue-500 shadow-lg" : ""}`}>
+  return <Card className="border-2 border-black rounded">
       <CardHeader className="bg-gray-50">
-        <div className={`w-12 h-12 rounded-lg flex items-center justify-center mb-4 transition-colors ${active ? "bg-blue-500" : "bg-muted"}`}>
-          <Icon className={`w-6 h-6 ${active ? "text-white" : "text-muted-foreground"}`} />
+        <div className="bg-gray-50">
+          <Icon className="bg-gray-50" />
         </div>
-        <CardTitle className="text-xl">{title}</CardTitle>
+        <CardTitle className="text-xl text-zinc-950">{title}</CardTitle>
       </CardHeader>
       <CardContent className="bg-gray-50">
-        <p className="text-muted-foreground leading-relaxed">{description}</p>
+        <p className="leading-relaxed text-zinc-950 text-lg">{description}</p>
       </CardContent>
     </Card>;
 };

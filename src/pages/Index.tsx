@@ -23,7 +23,7 @@ const Index = () => {
             <Badge className="mb-6 text-white border-white/30 bg-slate-950">
               🚀 AI-Powered Career Success Platform
             </Badge>
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
+            <h1 className="text-5xl font-bold mb-6 leading-tight text-zinc-950 md:text-7xl">
               Your AI Career <br />
               <span className="text-brand-purple">Sculptor</span>
             </h1>
@@ -33,27 +33,27 @@ const Index = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Link to="/profile">
-                <Button size="lg" className="bg-white text-blue-600 hover:bg-blue-50 font-semibold px-8 py-4">
+                <Button size="lg" className="text-blue-600 px-8 py-4 bg-zinc-500 hover:bg-zinc-400 font-semibold text-lg">
                   Start Building Your Career
                   <ChevronRight className="ml-2 w-5 h-5" />
                 </Button>
               </Link>
-              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10 px-8 py-4">
+              <Button size="lg" variant="outline" className="border-white text-white px-8 py-4 bg-lime-500 hover:bg-lime-400 text-lg">
                 Watch Demo
               </Button>
             </div>
             <div className="mt-12 grid grid-cols-3 gap-8 max-w-md mx-auto">
               <div className="text-center">
-                <div className="text-2xl font-bold">95%</div>
-                <div className="text-sm text-blue-200">Success Rate</div>
+                <div className="text-2xl font-bold bg-gray-950">95%</div>
+                <div className="text-sm text-blue-200 bg-gray-950">Success Rate</div>
               </div>
               <div className="text-center">
-                <div className="text-2xl font-bold">50K+</div>
-                <div className="text-sm text-blue-200">Students Helped</div>
+                <div className="text-2xl font-bold bg-gray-950">50K+</div>
+                <div className="text-sm text-blue-200 bg-gray-950">Students Helped</div>
               </div>
               <div className="text-center">
-                <div className="text-2xl font-bold">9</div>
-                <div className="text-sm text-blue-200">AI Agents</div>
+                <div className="text-2xl font-bold bg-gray-950">9</div>
+                <div className="text-sm text-blue-200 bg-gray-950">AI Agents</div>
               </div>
             </div>
           </div>
@@ -61,17 +61,17 @@ const Index = () => {
       </section>
 
       {/* Skills Visualization Demo */}
-      <section className="py-20 px-4 bg-neutral-50">
+      <section className="py-20 px-4 bg-neutral-50 border-b-2 border-black ">
         <div className="container mx-auto">
           <div className="text-center mb-16">
-            <h2 className="font-bold mb-4 text-4xl">See Your Skills in Action</h2>
+            <h2 className="font-bold mb-4 text-4xl text-zinc-950">See Your Skills in Action</h2>
             <p className="text-lime-400 font-medium text-2xl">
               Our AI analyzes your profile and matches it with perfect opportunities
             </p>
           </div>
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <Card className="p-6">
+              <Card className="p-6 bg-lime-500">
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
                     <BarChart3 className="w-5 h-5 text-brand-blue" />
@@ -82,15 +82,15 @@ const Index = () => {
                   <RadarChart />
                   <div className="mt-6 space-y-3">
                     <div className="flex items-center justify-between">
-                      <span className="text-sm">Python</span>
+                      <span className="text-zinc-50 font-semibold text-sm">Python</span>
                       <Badge className="bg-green-100 text-green-800">Strong Match</Badge>
                     </div>
                     <div className="flex items-center justify-between">
-                      <span className="text-sm">SQL</span>
+                      <span className="text-zinc-50 font-semibold text-sm">SQL</span>
                       <Badge className="bg-yellow-100 text-yellow-800">Good Match</Badge>
                     </div>
                     <div className="flex items-center justify-between">
-                      <span className="text-sm">Machine Learning</span>
+                      <span className="font-semibold text-zinc-50 text-sm">Machine Learning</span>
                       <Badge className="bg-green-100 text-green-800">Strong Match</Badge>
                     </div>
                   </div>
