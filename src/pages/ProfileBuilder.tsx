@@ -46,7 +46,7 @@ const ProfileBuilder = () => {
   return <div className="min-h-screen bg-background">
       <Navigation />
       
-      <div className="container mx-auto px-4 py-3 bg-gray-50">
+      <div className="">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-8">
             <h1 className="text-3xl font-bold mb-4">Build Your Profile</h1>
@@ -58,7 +58,7 @@ const ProfileBuilder = () => {
           <div className="grid lg:grid-cols-3 gap-8">
             {/* Progress Sidebar */}
             <div className="lg:col-span-1 space-y-6">
-              <Card className="bg-gray-200 text-black  border-1 border-black">
+              <Card className="bg-gray-200 text-black  border-2 border-black">
                 <CardHeader>
                   <CardTitle>Profile Progress</CardTitle>
                 </CardHeader>
@@ -88,7 +88,7 @@ const ProfileBuilder = () => {
                 </CardContent>
               </Card>
 
-              <Card className="border-1 border-black ">
+              <Card className="border-2 border-black ">
                 <CardHeader>
                   <CardTitle>Quick Import</CardTitle>
                 </CardHeader>
@@ -110,7 +110,7 @@ const ProfileBuilder = () => {
             {/* Main Form */}
             <div className="lg:col-span-2 space-y-6">
               {/* Basic Information */}
-              <Card className="bg-gray-200 text-black  border-1 border-black">
+              <Card className="bg-gray-200 text-black  border-2 border-black">
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
                     <User className="w-5 h-5" />
@@ -140,7 +140,7 @@ const ProfileBuilder = () => {
               </Card>
 
               {/* Education */}
-              <Card className="bg-gray-200 text-black  border-1 border-black">
+              <Card className="bg-gray-200 text-black  border-2 border-black">
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
                     <GraduationCap className="w-5 h-5" />
@@ -205,7 +205,7 @@ const ProfileBuilder = () => {
               </Card>
 
               {/* Projects */}
-              <Card className="border-black border-8 bg-transparent">
+              <Card className="border-black border-2">
                 <CardHeader className="bg-gray-50">
                   <CardTitle className="flex items-center gap-2 text-zinc-950">
                     <Briefcase className="w-5 h-5" />
@@ -239,7 +239,7 @@ const ProfileBuilder = () => {
               </Card>
 
               {/* Career Goals */}
-              <Card className="bg-lime-500">
+              <Card className="bg-lime-500 border-2 border-black ">
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
                     <Target className="w-5 h-5" />
