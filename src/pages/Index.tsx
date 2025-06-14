@@ -43,7 +43,7 @@ const Index = () => {
             </Badge>
             <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
               Your AI Career <br />
-              <span className="text-yellow-300">Sculptor</span>
+              <span className="text-brand-purple">Sculptor</span>
             </h1>
             <p className="text-xl md:text-2xl mb-8 text-blue-100 leading-relaxed">
               Discover opportunities that match your skills and generate ATS-optimized resumes, 
