@@ -10,6 +10,7 @@ import { AgentShowcase } from "@/components/AgentShowcase";
 import { FeatureCard } from "@/components/FeatureCard";
 import { TestimonialCard } from "@/components/TestimonialCard";
 import { Navigation } from "@/components/Navigation";
+import { TypewriterText } from "@/components/TypewriterText";
 const Index = () => {
   const [activeTab, setActiveTab] = useState("discovery");
   return <div className="min-h-screen bg-background">
@@ -24,8 +25,11 @@ const Index = () => {
               🚀 AI-Powered Career Success Platform
             </Badge>
             <h1 className="text-5xl font-bold mb-6 leading-tight text-zinc-950 md:text-7xl">
-              Your AI Career <br />
-              <span className="text-brand-purple">Sculptor</span>
+              <TypewriterText
+                text="Your AI Career Sculptor"
+                className="text-brand-purple"
+                speed={60}
+              />
             </h1>
             <p className="text-xl mb-8 leading-relaxed text-indigo-500 md:text-2xl font-normal">
               Discover opportunities that match your skills and generate ATS-optimized resumes, 
