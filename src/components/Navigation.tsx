@@ -28,7 +28,8 @@ export const Navigation = () => {
     icon: Award
   }];
   return (
-    <header className="w-full border-b border-border/40 backdrop-blur-sm sticky top-0 z-50 bg-white py-4">
+-    <header className="w-full border-b border-border/40 backdrop-blur-sm sticky top-0 z-50 bg-white py-4">
++    <header className="w-full border-b border-border/40 backdrop-blur-sm sticky top-0 z-50 bg-lime-500 py-4">
       <div className="flex items-center justify-between px-4 max-w-7xl mx-auto">
         <Link to="/" className="flex items-center space-x-2">
           <div className="w-8 h-8 gradient-bg rounded-lg flex items-center justify-center">
