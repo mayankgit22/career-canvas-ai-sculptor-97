@@ -4,40 +4,22 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Progress } from "@/components/ui/progress";
-import { 
-  Brain, 
-  Target, 
-  Zap, 
-  Users, 
-  FileText, 
-  BarChart3, 
-  Sparkles, 
-  ChevronRight, 
-  Star,
-  CheckCircle,
-  TrendingUp,
-  Award,
-  Share2,
-  Rocket
-} from "lucide-react";
+import { Brain, Target, Zap, Users, FileText, BarChart3, Sparkles, ChevronRight, Star, CheckCircle, TrendingUp, Award, Share2, Rocket } from "lucide-react";
 import { RadarChart } from "@/components/RadarChart";
 import { AgentShowcase } from "@/components/AgentShowcase";
 import { FeatureCard } from "@/components/FeatureCard";
 import { TestimonialCard } from "@/components/TestimonialCard";
 import { Navigation } from "@/components/Navigation";
-
 const Index = () => {
   const [activeTab, setActiveTab] = useState("discovery");
-
-  return (
-    <div className="min-h-screen bg-background">
+  return <div className="min-h-screen bg-background">
       <Navigation />
 
       {/* Hero Section */}
       <section className="py-20 px-4 gradient-bg text-white relative overflow-hidden">
         <div className="absolute inset-0 bg-black/10"></div>
         <div className="container mx-auto relative z-10">
-          <div className="text-center max-w-4xl mx-auto">
+          <div className="text-center max-w-4xl mx-auto bg-transparent ">
             <Badge className="mb-6 bg-white/20 text-white border-white/30 hover:bg-white/30">
               🚀 AI-Powered Career Success Platform
             </Badge>
@@ -165,61 +147,35 @@ const Index = () => {
           </div>
           
           <div className="flex flex-wrap justify-center gap-4 mb-12">
-            {[
-              { id: "discovery", label: "Opportunity Discovery", icon: Target },
-              { id: "content", label: "Content Creation", icon: FileText },
-              { id: "optimization", label: "ATS Optimization", icon: Zap },
-              { id: "sharing", label: "Social Sharing", icon: Share2 }
-            ].map((tab) => (
-              <Button
-                key={tab.id}
-                variant={activeTab === tab.id ? "default" : "outline"}
-                onClick={() => setActiveTab(tab.id)}
-                className={activeTab === tab.id ? "gradient-bg" : ""}
-              >
+            {[{
+            id: "discovery",
+            label: "Opportunity Discovery",
+            icon: Target
+          }, {
+            id: "content",
+            label: "Content Creation",
+            icon: FileText
+          }, {
+            id: "optimization",
+            label: "ATS Optimization",
+            icon: Zap
+          }, {
+            id: "sharing",
+            label: "Social Sharing",
+            icon: Share2
+          }].map(tab => <Button key={tab.id} variant={activeTab === tab.id ? "default" : "outline"} onClick={() => setActiveTab(tab.id)} className={activeTab === tab.id ? "gradient-bg" : ""}>
                 <tab.icon className="w-4 h-4 mr-2" />
                 {tab.label}
-              </Button>
-            ))}
+              </Button>)}
           </div>
 
           <div className="grid lg:grid-cols-3 gap-8">
-            <FeatureCard
-              icon={Brain}
-              title="AI-Powered Matching"
-              description="Our machine learning algorithms analyze thousands of opportunities to find your perfect matches."
-              active={activeTab === "discovery"}
-            />
-            <FeatureCard
-              icon={FileText}
-              title="Instant Resume Generation"
-              description="Create ATS-optimized resumes tailored to specific companies and roles in seconds."
-              active={activeTab === "content"}
-            />
-            <FeatureCard
-              icon={Zap}
-              title="ATS Optimization"
-              description="Ensure your applications pass automated screening with smart keyword integration."
-              active={activeTab === "optimization"}
-            />
-            <FeatureCard
-              icon={Users}
-              title="Portfolio Microsites"
-              description="Showcase your projects with beautiful, shareable portfolio websites."
-              active={activeTab === "sharing"}
-            />
-            <FeatureCard
-              icon={Award}
-              title="Gamified Progress"
-              description="Earn badges and track your career journey with our engaging progression system."
-              active={activeTab === "discovery"}
-            />
-            <FeatureCard
-              icon={BarChart3}
-              title="Skill Visualization"
-              description="Interactive charts that make your skills and achievements visually compelling."
-              active={activeTab === "content"}
-            />
+            <FeatureCard icon={Brain} title="AI-Powered Matching" description="Our machine learning algorithms analyze thousands of opportunities to find your perfect matches." active={activeTab === "discovery"} />
+            <FeatureCard icon={FileText} title="Instant Resume Generation" description="Create ATS-optimized resumes tailored to specific companies and roles in seconds." active={activeTab === "content"} />
+            <FeatureCard icon={Zap} title="ATS Optimization" description="Ensure your applications pass automated screening with smart keyword integration." active={activeTab === "optimization"} />
+            <FeatureCard icon={Users} title="Portfolio Microsites" description="Showcase your projects with beautiful, shareable portfolio websites." active={activeTab === "sharing"} />
+            <FeatureCard icon={Award} title="Gamified Progress" description="Earn badges and track your career journey with our engaging progression system." active={activeTab === "discovery"} />
+            <FeatureCard icon={BarChart3} title="Skill Visualization" description="Interactive charts that make your skills and achievements visually compelling." active={activeTab === "content"} />
           </div>
         </div>
       </section>
@@ -248,30 +204,9 @@ const Index = () => {
           </div>
           
           <div className="grid md:grid-cols-3 gap-8">
-            <TestimonialCard
-              name="Sarah Chen"
-              role="Computer Science Student"
-              company="Google Intern"
-              quote="CareerCanvas helped me land my dream internship at Google! The AI-generated resume was perfectly tailored to the role."
-              rating={5}
-              achievement="Landed Google SWE Internship"
-            />
-            <TestimonialCard
-              name="Marcus Johnson"
-              role="Data Science Student"
-              company="Microsoft"
-              quote="The skill visualization feature showed me exactly what I needed to work on. Got my Microsoft offer 3 months later!"
-              rating={5}
-              achievement="$95k Starting Salary"
-            />
-            <TestimonialCard
-              name="Emily Rodriguez"
-              role="Business Student"
-              company="Goldman Sachs"
-              quote="The portfolio microsite generated by CareerCanvas impressed recruiters. It's like having a personal brand manager!"
-              rating={5}
-              achievement="Investment Banking Analyst"
-            />
+            <TestimonialCard name="Sarah Chen" role="Computer Science Student" company="Google Intern" quote="CareerCanvas helped me land my dream internship at Google! The AI-generated resume was perfectly tailored to the role." rating={5} achievement="Landed Google SWE Internship" />
+            <TestimonialCard name="Marcus Johnson" role="Data Science Student" company="Microsoft" quote="The skill visualization feature showed me exactly what I needed to work on. Got my Microsoft offer 3 months later!" rating={5} achievement="$95k Starting Salary" />
+            <TestimonialCard name="Emily Rodriguez" role="Business Student" company="Goldman Sachs" quote="The portfolio microsite generated by CareerCanvas impressed recruiters. It's like having a personal brand manager!" rating={5} achievement="Investment Banking Analyst" />
           </div>
 
           <div className="text-center mt-12">
@@ -341,8 +276,6 @@ const Index = () => {
           </div>
         </div>
       </footer>
-    </div>
-  );
+    </div>;
 };
-
 export default Index;
