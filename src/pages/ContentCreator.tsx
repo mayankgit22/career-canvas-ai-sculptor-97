@@ -65,7 +65,7 @@ const ContentCreator = () => {
                             <div className="flex items-center justify-between">
                               <div>
                                 <p className="font-medium text-sm">{opp.title}</p>
-                                <p className="text-xs text-muted-foreground">{opp.company}</p>
+                                <p className="text-xs text-zinc-950">{opp.company}</p>
                               </div>
                               <Badge className="bg-green-100 text-green-800 text-xs">
                                 {opp.match}%
@@ -84,7 +84,7 @@ const ContentCreator = () => {
                       <div className="space-y-3">
                         {resumeTemplates.map(template => <div key={template.id} className="p-3 rounded-lg border hover:bg-muted cursor-pointer">
                             <p className="font-medium text-sm">{template.name}</p>
-                            <p className="text-xs text-muted-foreground">{template.description}</p>
+                            <p className="text-xs text-zinc-950">{template.description}</p>
                           </div>)}
                       </div>
                     </CardContent>
@@ -97,7 +97,7 @@ const ContentCreator = () => {
                     <CardContent>
                       <div className="text-center">
                         <div className="text-3xl font-bold text-green-600 mb-2">94%</div>
-                        <p className="text-sm text-muted-foreground">ATS Compatibility</p>
+                        <p className="text-sm text-zinc-950">ATS Compatibility</p>
                         <div className="mt-4 space-y-2">
                           <div className="flex items-center gap-2 text-sm">
                             <CheckCircle className="w-4 h-4 text-green-600" />
