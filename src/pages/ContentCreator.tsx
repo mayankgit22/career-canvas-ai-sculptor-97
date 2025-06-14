@@ -45,7 +45,7 @@ const ContentCreator = () => {
 
           <Tabs defaultValue="resume" className="space-y-8">
             <TabsList className="grid w-full grid-cols-3">
-              <TabsTrigger value="resume" className="text-zinc-950 bg-lime-500 hover:bg-lime-400">Resume/CV Builder</TabsTrigger>
+              <TabsTrigger value="resume" className="text-zinc-950 bg-lime-600 hover:bg-lime-500">Resume/CV Builder</TabsTrigger>
               <TabsTrigger value="portfolio" className="text-zinc-950 bg-lime-500 hover:bg-lime-400 mr-2 ml-2">Portfolio Creator</TabsTrigger>
               <TabsTrigger value="cover-letter" className="text-zinc-950 bg-lime-500 hover:bg-lime-400">Cover Letter</TabsTrigger>
             </TabsList>
