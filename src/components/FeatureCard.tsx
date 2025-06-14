@@ -19,7 +19,7 @@ export const FeatureCard = ({
         </div>
         <CardTitle className="text-xl">{title}</CardTitle>
       </CardHeader>
-      <CardContent>
+      <CardContent className="bg-gray-50">
         <p className="text-muted-foreground leading-relaxed">{description}</p>
       </CardContent>
     </Card>;
