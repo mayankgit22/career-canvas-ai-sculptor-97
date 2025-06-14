@@ -7,14 +7,14 @@
 
 @layer base {
   :root {
-    --background: 0 0 0;        /* Changed from 248 250 252 to black */
-    --foreground: 248 250 252;  /* Use a very light foreground for readability */
+    --background: 248 250 252;
+    --foreground: 15 23 42;
 
-    --card: 28 28 28;
-    --card-foreground: 248 250 252;
+    --card: 255 255 255;
+    --card-foreground: 15 23 42;
 
-    --popover: 28 28 28;
-    --popover-foreground: 248 250 252;
+    --popover: 255 255 255;
+    --popover-foreground: 15 23 42;
 
     --primary: 37 99 235;
     --primary-foreground: 248 250 252;
@@ -22,8 +22,8 @@
     --secondary: 241 245 249;
     --secondary-foreground: 15 23 42;
 
-    --muted: 51 65 85;
-    --muted-foreground: 148 163 184;
+    --muted: 241 245 249;
+    --muted-foreground: 100 116 139;
 
     --accent: 241 245 249;
     --accent-foreground: 15 23 42;
@@ -31,19 +31,19 @@
     --destructive: 239 68 68;
     --destructive-foreground: 248 250 252;
 
-    --border: 34 34 34;
-    --input: 34 34 34;
+    --border: 226 232 240;
+    --input: 226 232 240;
     --ring: 37 99 235;
 
     --radius: 0.75rem;
 
-    --sidebar-background: 28 28 28;
-    --sidebar-foreground: 248 250 252;
+    --sidebar-background: 255 255 255;
+    --sidebar-foreground: 15 23 42;
     --sidebar-primary: 37 99 235;
     --sidebar-primary-foreground: 248 250 252;
-    --sidebar-accent: 51 65 85;
-    --sidebar-accent-foreground: 248 250 252;
-    --sidebar-border: 34 34 34;
+    --sidebar-accent: 241 245 249;
+    --sidebar-accent-foreground: 15 23 42;
+    --sidebar-border: 226 232 240;
     --sidebar-ring: 37 99 235;
   }
 
@@ -94,7 +94,6 @@
 
   body {
     @apply bg-background text-foreground;
-    background-color: #000 !important; /* Force solid black background for light theme */
     font-feature-settings: "rlig" 1, "calt" 1;
   }
 }
