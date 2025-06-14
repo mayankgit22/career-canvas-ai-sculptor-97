@@ -27,7 +27,7 @@ export const Navigation = () => {
     icon: Award
   }];
   return <header className="border-b border-border/40 backdrop-blur-sm sticky top-0 z-50 bg-background/95">
-      <div className="container mx-auto px-4 py-4 bg-violet-800">
+      <div className="container mx-auto px-4 py-4 bg-lime-500">
         <div className="flex items-center justify-between">
           <Link to="/" className="flex items-center space-x-2">
             <div className="w-8 h-8 gradient-bg rounded-lg flex items-center justify-center">
@@ -43,7 +43,7 @@ export const Navigation = () => {
             const isActive = location.pathname === item.path;
             return <Link key={item.path} to={item.path} className={`flex items-center space-x-1 px-3 py-2 rounded-lg transition-colors ${isActive ? "bg-primary text-primary-foreground" : "text-muted-foreground hover:text-foreground hover:bg-muted"}`}>
                   <Icon className="w-4 h-4" />
-                  <span className="text-lime-50">{item.label}</span>
+                  <span className="text-zinc-950 font-semibold text-base">{item.label}</span>
                 </Link>;
           })}
           </nav>

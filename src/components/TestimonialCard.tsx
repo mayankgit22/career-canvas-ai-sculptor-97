@@ -1,8 +1,6 @@
-
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Star } from "lucide-react";
-
 interface TestimonialCardProps {
   name: string;
   role: string;
@@ -11,22 +9,18 @@ interface TestimonialCardProps {
   rating: number;
   achievement: string;
 }
-
-export const TestimonialCard = ({ 
-  name, 
-  role, 
-  company, 
-  quote, 
-  rating, 
-  achievement 
+export const TestimonialCard = ({
+  name,
+  role,
+  company,
+  quote,
+  rating,
+  achievement
 }: TestimonialCardProps) => {
-  return (
-    <Card className="h-full hover:shadow-lg transition-all duration-300">
-      <CardContent className="p-6">
+  return <Card className="h-full hover:shadow-lg transition-all duration-300 bg-transparent">
+      <CardContent className="p-6 bg-slate-800">
         <div className="flex mb-4">
-          {[...Array(rating)].map((_, i) => (
-            <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
-          ))}
+          {[...Array(rating)].map((_, i) => <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />)}
         </div>
         
         <blockquote className="text-muted-foreground mb-6 leading-relaxed">
@@ -45,6 +39,5 @@ export const TestimonialCard = ({
           </Badge>
         </div>
       </CardContent>
-    </Card>
-  );
+    </Card>;
 };

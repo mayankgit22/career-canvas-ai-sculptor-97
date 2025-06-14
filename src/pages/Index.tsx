@@ -17,17 +17,17 @@ const Index = () => {
 
       {/* Hero Section */}
       <section className="py-20 px-4 gradient-bg text-white relative overflow-hidden">
-        <div className="absolute inset-0 bg-black/10"></div>
+        <div className="absolute inset-0 absolute bg-slate-50 border-b-2 border-black "></div>
         <div className="container mx-auto relative z-10">
           <div className="text-center max-w-4xl mx-auto bg-transparent ">
-            <Badge className="mb-6 bg-white/20 text-white border-white/30 hover:bg-white/30">
+            <Badge className="mb-6 text-white border-white/30 bg-slate-950">
               🚀 AI-Powered Career Success Platform
             </Badge>
             <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
               Your AI Career <br />
               <span className="text-brand-purple">Sculptor</span>
             </h1>
-            <p className="text-xl md:text-2xl mb-8 text-blue-100 leading-relaxed">
+            <p className="text-xl mb-8 leading-relaxed text-indigo-500 md:text-2xl font-normal">
               Discover opportunities that match your skills and generate ATS-optimized resumes, 
               portfolios, and application materials—all powered by our 9-agent AI system.
             </p>
@@ -61,11 +61,11 @@ const Index = () => {
       </section>
 
       {/* Skills Visualization Demo */}
-      <section className="py-20 px-4 bg-muted/30">
+      <section className="py-20 px-4 bg-neutral-50">
         <div className="container mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">See Your Skills in Action</h2>
-            <p className="text-xl text-muted-foreground">
+            <h2 className="font-bold mb-4 text-4xl">See Your Skills in Action</h2>
+            <p className="text-lime-400 font-medium text-2xl">
               Our AI analyzes your profile and matches it with perfect opportunities
             </p>
           </div>
@@ -104,7 +104,7 @@ const Index = () => {
                 </div>
                 <div>
                   <h3 className="font-semibold mb-2">Smart Opportunity Matching</h3>
-                  <p className="text-muted-foreground">
+                  <p className="text-base text-zinc-950">
                     Our AI scans thousands of opportunities and ranks them based on your unique profile.
                   </p>
                 </div>
@@ -115,7 +115,7 @@ const Index = () => {
                 </div>
                 <div>
                   <h3 className="font-semibold mb-2">Real-time Skill Analysis</h3>
-                  <p className="text-muted-foreground">
+                  <p className="font-normal text-zinc-950">
                     See exactly how your skills align with job requirements and identify growth areas.
                   </p>
                 </div>
@@ -126,7 +126,7 @@ const Index = () => {
                 </div>
                 <div>
                   <h3 className="font-semibold mb-2">Personalized Recommendations</h3>
-                  <p className="text-muted-foreground">
+                  <p className="font-normal text-zinc-950">
                     Get actionable insights on how to improve your application for each opportunity.
                   </p>
                 </div>
@@ -137,11 +137,11 @@ const Index = () => {
       </section>
 
       {/* Features Tabs */}
-      <section id="features" className="py-20 px-4">
+      <section id="features" className="py-20 px-4 bg-gray-50">
         <div className="container mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">Everything You Need to Succeed</h2>
-            <p className="text-xl text-muted-foreground">
+            <h2 className="font-bold mb-4 text-4xl">Everything You Need to Succeed</h2>
+            <p className="text-3xl font-medium text-lime-500">
               From opportunity discovery to application submission—all in one platform
             </p>
           </div>
@@ -181,11 +181,11 @@ const Index = () => {
       </section>
 
       {/* AI Agents Section */}
-      <section id="agents" className="py-20 px-4 bg-muted/30">
+      <section id="agents" className="py-20 px-4 bg-gray-50">
         <div className="container mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">Meet Your AI Career Team</h2>
-            <p className="text-xl text-muted-foreground">
+            <h2 className="font-bold mb-4 text-4xl">Meet Your AI Career Team</h2>
+            <p className="text-lime-500 text-2xl">
               9 specialized agents working together to accelerate your career success
             </p>
           </div>
@@ -198,7 +198,7 @@ const Index = () => {
         <div className="container mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-4">Student Success Stories</h2>
-            <p className="text-xl text-muted-foreground">
+            <p className="font-normal text-lime-500 text-2xl">
               See how CareerCanvas has transformed careers across the globe
             </p>
           </div>
