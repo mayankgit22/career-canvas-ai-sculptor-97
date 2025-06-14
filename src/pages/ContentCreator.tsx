@@ -1,64 +1,53 @@
-
 import { useState } from "react";
 import { Navigation } from "@/components/Navigation";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { 
-  FileText, 
-  Download, 
-  Share2, 
-  Eye, 
-  Edit3, 
-  Palette,
-  Target,
-  CheckCircle,
-  Globe
-} from "lucide-react";
-
+import { FileText, Download, Share2, Eye, Edit3, Palette, Target, CheckCircle, Globe } from "lucide-react";
 const ContentCreator = () => {
   const [selectedOpportunity, setSelectedOpportunity] = useState("google-internship");
-
-  const opportunities = [
-    {
-      id: "google-internship",
-      title: "Google Data Science Internship",
-      company: "Google",
-      match: 92
-    },
-    {
-      id: "meta-internship", 
-      title: "Meta Software Engineering Internship",
-      company: "Meta",
-      match: 88
-    }
-  ];
-
-  const resumeTemplates = [
-    { id: "tech", name: "Tech Professional", description: "Clean, ATS-optimized for tech roles" },
-    { id: "creative", name: "Creative", description: "Visual appeal for design roles" },
-    { id: "business", name: "Business", description: "Professional for business roles" }
-  ];
-
-  return (
-    <div className="min-h-screen bg-background">
+  const opportunities = [{
+    id: "google-internship",
+    title: "Google Data Science Internship",
+    company: "Google",
+    match: 92
+  }, {
+    id: "meta-internship",
+    title: "Meta Software Engineering Internship",
+    company: "Meta",
+    match: 88
+  }];
+  const resumeTemplates = [{
+    id: "tech",
+    name: "Tech Professional",
+    description: "Clean, ATS-optimized for tech roles"
+  }, {
+    id: "creative",
+    name: "Creative",
+    description: "Visual appeal for design roles"
+  }, {
+    id: "business",
+    name: "Business",
+    description: "Professional for business roles"
+  }];
+  return <div className="min-h-screen bg-background">
       <Navigation />
       
-      <div className="container mx-auto px-4 py-8">
+      <div className="container mx-auto px-4 py-8 bg-gray-50">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-8">
-            <h1 className="text-3xl font-bold mb-4">Content Creator</h1>
-            <p className="text-xl text-muted-foreground">
+            <h1 className="text-3xl font-bold mb-4 text-zinc-950">Content Creator</h1>
+            <p className="text-lime-500 font-semibold text-2xl">
               Generate tailored resumes, cover letters, and portfolios for your target opportunities
             </p>
           </div>
 
           <Tabs defaultValue="resume" className="space-y-8">
             <TabsList className="grid w-full grid-cols-3">
-              <TabsTrigger value="resume">Resume/CV Builder</TabsTrigger>
-              <TabsTrigger value="portfolio">Portfolio Creator</TabsTrigger>
-              <TabsTrigger value="cover-letter">Cover Letter</TabsTrigger>
+              <TabsTrigger value="resume" className="text-zinc-950 bg-lime-500 hover:bg-lime-400">Resume/CV Builder</TabsTrigger>
+              <TabsTrigger value="portfolio" className="text-zinc-950 bg-lime-500 hover:bg-lime-400 mr-2 ml-2">Portfolio Creator</TabsTrigger>
+              <TabsTrigger value="cover-letter" className="text-zinc-950 bg-lime-500 hover:bg-lime-400">Cover Letter</TabsTrigger>
             </TabsList>
 
             {/* Resume Builder */}
@@ -72,16 +61,7 @@ const ContentCreator = () => {
                     </CardHeader>
                     <CardContent>
                       <div className="space-y-3">
-                        {opportunities.map((opp) => (
-                          <div 
-                            key={opp.id}
-                            className={`p-3 rounded-lg border cursor-pointer transition-colors ${
-                              selectedOpportunity === opp.id 
-                                ? "border-primary bg-primary/5" 
-                                : "border-border hover:bg-muted"
-                            }`}
-                            onClick={() => setSelectedOpportunity(opp.id)}
-                          >
+                        {opportunities.map(opp => <div key={opp.id} className={`p-3 rounded-lg border cursor-pointer transition-colors ${selectedOpportunity === opp.id ? "border-primary bg-primary/5" : "border-border hover:bg-muted"}`} onClick={() => setSelectedOpportunity(opp.id)}>
                             <div className="flex items-center justify-between">
                               <div>
                                 <p className="font-medium text-sm">{opp.title}</p>
@@ -91,8 +71,7 @@ const ContentCreator = () => {
                                 {opp.match}%
                               </Badge>
                             </div>
-                          </div>
-                        ))}
+                          </div>)}
                       </div>
                     </CardContent>
                   </Card>
@@ -103,12 +82,10 @@ const ContentCreator = () => {
                     </CardHeader>
                     <CardContent>
                       <div className="space-y-3">
-                        {resumeTemplates.map((template) => (
-                          <div key={template.id} className="p-3 rounded-lg border hover:bg-muted cursor-pointer">
+                        {resumeTemplates.map(template => <div key={template.id} className="p-3 rounded-lg border hover:bg-muted cursor-pointer">
                             <p className="font-medium text-sm">{template.name}</p>
                             <p className="text-xs text-muted-foreground">{template.description}</p>
-                          </div>
-                        ))}
+                          </div>)}
                       </div>
                     </CardContent>
                   </Card>
@@ -231,14 +208,14 @@ const ContentCreator = () => {
             <TabsContent value="portfolio" className="space-y-6">
               <div className="grid lg:grid-cols-2 gap-8">
                 <Card>
-                  <CardHeader>
-                    <CardTitle>Portfolio Microsite</CardTitle>
+                  <CardHeader className="bg-transparent">
+                    <CardTitle className="text-zinc-950">Portfolio Microsite</CardTitle>
                   </CardHeader>
                   <CardContent className="space-y-4">
                     <div className="bg-muted p-4 rounded-lg">
                       <h3 className="font-semibold mb-2">Your Portfolio URL</h3>
                       <div className="flex items-center gap-2">
-                        <code className="text-sm bg-background px-2 py-1 rounded">
+                        <code className="text-sm px-2 py-1 rounded bg-slate-300">
                           https://careercanvas.dev/john-doe
                         </code>
                         <Button size="sm" variant="outline">
@@ -250,15 +227,15 @@ const ContentCreator = () => {
                     <div className="space-y-3">
                       <div className="flex items-center justify-between">
                         <span className="text-sm">Projects Showcased</span>
-                        <Badge>3 Projects</Badge>
+                        <Badge className="bg-slate-400">3 Projects</Badge>
                       </div>
                       <div className="flex items-center justify-between">
                         <span className="text-sm">Skills Highlighted</span>
-                        <Badge>8 Skills</Badge>
+                        <Badge className="bg-slate-400">8 Skills</Badge>
                       </div>
                       <div className="flex items-center justify-between">
                         <span className="text-sm">Design Theme</span>
-                        <Badge>Tech Professional</Badge>
+                        <Badge className="bg-slate-400">Tech Professional</Badge>
                       </div>
                     </div>
 
@@ -271,18 +248,18 @@ const ContentCreator = () => {
 
                 <Card>
                   <CardHeader>
-                    <CardTitle>Portfolio Preview</CardTitle>
+                    <CardTitle className="text-zinc-950">Portfolio Preview</CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <div className="bg-muted p-4 rounded-lg h-64 flex items-center justify-center">
-                      <p className="text-muted-foreground">Portfolio preview will appear here</p>
+                    <div className="p-4 rounded-lg h-64 flex items-center justify-center bg-gray-50">
+                      <p className="text-lg text-zinc-950">Portfolio preview will appear here</p>
                     </div>
                     <div className="flex gap-2 mt-4">
-                      <Button variant="outline" size="sm" className="flex-1">
+                      <Button variant="outline" size="sm" className="flex-1 bg-indigo-700 hover:bg-indigo-600 text-zinc-50">
                         <Edit3 className="w-4 h-4 mr-2" />
                         Customize
                       </Button>
-                      <Button variant="outline" size="sm" className="flex-1">
+                      <Button variant="outline" size="sm" className="flex-1 bg-indigo-700 hover:bg-indigo-600 text-zinc-50">
                         <Eye className="w-4 h-4 mr-2" />
                         Preview
                       </Button>
@@ -351,8 +328,6 @@ const ContentCreator = () => {
           </Tabs>
         </div>
       </div>
-    </div>
-  );
+    </div>;
 };
-
 export default ContentCreator;
