@@ -65,7 +65,7 @@ const Index = () => {
         <div className="container mx-auto">
           <div className="text-center mb-16">
             <h2 className="font-bold mb-4 text-4xl text-zinc-950">See Your Skills in Action</h2>
-            <p className="text-lime-400 font-medium text-2xl">
+            <p className="text-lime-400 font-medium text-3xl">
               Our AI analyzes your profile and matches it with perfect opportunities
             </p>
           </div>
@@ -140,7 +140,7 @@ const Index = () => {
       <section id="features" className="py-20 px-4 bg-gray-50">
         <div className="container mx-auto">
           <div className="text-center mb-16">
-            <h2 className="font-bold mb-4 text-4xl">Everything You Need to Succeed</h2>
+            <h2 className="font-bold mb-4 text-4xl text-zinc-950">Everything You Need to Succeed</h2>
             <p className="text-3xl font-medium text-lime-500">
               From opportunity discovery to application submission—all in one platform
             </p>
