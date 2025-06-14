@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
@@ -26,7 +27,7 @@ export const Navigation = () => {
     label: "Badges",
     icon: Award
   }];
-  return <header className="border-b border-border/40 backdrop-blur-sm sticky top-0 z-50 bg-background/95">
+  return <header className="border-b border-border/40 backdrop-blur-sm sticky top-0 z-50 bg-white">
       <div className="container mx-auto px-4 py-4 bg-lime-500">
         <div className="flex items-center justify-between">
           <Link to="/" className="flex items-center space-x-2">
