@@ -33,7 +33,7 @@ const Index = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Link to="/profile">
-                <Button size="lg" className="text-blue-600 px-8 py-4 bg-zinc-500 hover:bg-zinc-400 font-semibold text-lg">
+                <Button size="lg" className="text-blue-600 px-8 py-4 font-semibold text-lg bg-zinc-400 hover:bg-zinc-300">
                   Start Building Your Career
                   <ChevronRight className="ml-2 w-5 h-5" />
                 </Button>
