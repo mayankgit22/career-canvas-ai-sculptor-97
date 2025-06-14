@@ -128,7 +128,7 @@ const Dashboard = () => {
               <CardHeader>
                 <CardTitle className="text-yellow-950">Skill-Opportunity Match Analysis</CardTitle>
               </CardHeader>
-              <CardContent>
+              <CardContent className="px-[11px]">
                 <div className="grid lg:grid-cols-2 gap-8 items-center">
                   <RadarChart />
                   <div className="space-y-4">
