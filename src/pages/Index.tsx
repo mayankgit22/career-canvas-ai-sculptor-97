@@ -194,7 +194,7 @@ const Index = () => {
       </section>
 
       {/* Success Stories */}
-      <section id="success" className="py-20 px-4">
+      <section id="success" className="py-20 px-4 bg-slate-950">
         <div className="container mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-4">Student Success Stories</h2>
@@ -235,10 +235,10 @@ const Index = () => {
                 Empowering students with AI-driven career success tools.
               </p>
               <div className="flex space-x-4">
-                <Button size="sm" variant="outline" className="border-slate-600 text-slate-300">
+                <Button size="sm" variant="outline" className="border-slate-600 text-zinc-950">
                   Twitter
                 </Button>
-                <Button size="sm" variant="outline" className="border-slate-600 text-slate-300">
+                <Button size="sm" variant="outline" className="border-slate-600 text-zinc-950">
                   LinkedIn
                 </Button>
               </div>
