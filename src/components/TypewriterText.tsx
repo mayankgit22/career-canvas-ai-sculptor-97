@@ -15,12 +15,16 @@ export const TypewriterText: React.FC<TypewriterTextProps> = ({
   const [displayed, setDisplayed] = useState("");
 
   useEffect(() => {
-    setDisplayed(""); // Reset if text changes
+    setDisplayed("");
     let i = 0;
     const interval = setInterval(() => {
-      setDisplayed((prev) => prev + text[i]);
-      i++;
-      if (i >= text.length) clearInterval(interval);
+      // Only add characters if within bounds
+      if (i < text.length) {
+        setDisplayed((prev) => prev + text[i]);
+        i++;
+      } else {
+        clearInterval(interval);
+      }
     }, speed);
     return () => clearInterval(interval);
   }, [text, speed]);
