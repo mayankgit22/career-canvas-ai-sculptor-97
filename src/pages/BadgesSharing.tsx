@@ -1,3 +1,4 @@
+
 import { Navigation } from "@/components/Navigation";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -87,7 +88,7 @@ const BadgesSharing = () => {
   return <div className="min-h-screen bg-background">
       <Navigation />
       
-      <div className="container mx-auto px-4 py-8 bg-gray-50">
+      <div className="container mx-auto px-4 py-8 bg-white">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-8">
             <h1 className="text-3xl font-bold mb-4 text-zinc-950">Badges & Sharing</h1>

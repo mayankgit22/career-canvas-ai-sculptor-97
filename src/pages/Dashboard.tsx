@@ -38,10 +38,10 @@ const Dashboard = () => {
   return <div className="min-h-screen bg-background">
       <Navigation />
       
-      <div className="container mx-auto px-4 py-8 bg-gray-50">
+      <div className="container mx-auto px-4 py-8 bg-white">
         <div className="flex flex-col lg:flex-row gap-8">
           {/* Sidebar */}
-          <div className="lg:w-64 space-y-6 bg-gray-50">
+          <div className="lg:w-64 space-y-6 bg-white">
             <Card className="bg-indigo-500">
               <CardHeader>
                 <CardTitle className="text-lg text-zinc-950">Profile Progress</CardTitle>
