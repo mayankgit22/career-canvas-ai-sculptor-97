@@ -99,7 +99,7 @@ const BadgesSharing = () => {
           <div className="grid lg:grid-cols-3 gap-8">
             {/* Badges Section */}
             <div className="lg:col-span-2 space-y-6">
-              <Card className="border-2 border-black ">
+              <Card className="border-2 border-black bg-lime-500">
                 <CardHeader className="">
                   <CardTitle className="flex items-center gap-2">
                     <Trophy className="w-5 h-5 text-yellow-500" />
@@ -111,7 +111,7 @@ const BadgesSharing = () => {
                     {earnedBadges.map((badge, index) => {
                     const Icon = badge.icon;
                     return <Card key={index} className="bg-slate-950">
-                          <CardContent className="p-4 border-black  border-2">
+                          <CardContent className="p-4 border-black border-2 rounded-2xl bg-black">
                             <div className="flex items-start gap-3">
                               <div className={`w-12 h-12 rounded-lg flex items-center justify-center ${badge.color}`}>
                                 <Icon className="w-6 h-6 text-white" />
@@ -140,7 +140,7 @@ const BadgesSharing = () => {
 
               {/* Shareable Content */}
               <Card className="bg-lime-500 border-2 border-black ">
-                <CardHeader className="">
+                <CardHeader className="bg-lime-500">
                   <CardTitle className="flex items-center gap-2">
                     <Share2 className="w-5 h-5 text-blue-500" />
                     Share Your Success
@@ -148,10 +148,10 @@ const BadgesSharing = () => {
                 </CardHeader>
                 <CardContent>
                   <div className="space-y-4">
-                    {shareableContent.map((content, index) => <Card key={index} className="hover:shadow-lg transition-shadow">
+                    {shareableContent.map((content, index) => <Card key={index} className="hover:shadow-lg transition-shadow bg-lime-300">
                         <CardContent className="p-4">
                           <div className="flex gap-4">
-                            <div className="w-20 h-16 bg-muted rounded-lg flex items-center justify-center">
+                            <div className="w-20 h-16 rounded-lg flex items-center justify-center bg-amber-950">
                               <FileText className="w-6 h-6 text-muted-foreground" />
                             </div>
                             <div className="flex-1">
@@ -161,11 +161,11 @@ const BadgesSharing = () => {
                               </div>
                               <p className="text-sm mb-3 text-zinc-900">{content.description}</p>
                               <div className="flex gap-2">
-                                {content.platforms.map(platform => <Button key={platform} size="sm" variant="outline">
+                                {content.platforms.map(platform => <Button key={platform} size="sm" variant="outline" className="bg-zinc-50 text-zinc-950">
                                     <Share2 className="w-3 h-3 mr-1" />
                                     {platform}
                                   </Button>)}
-                                <Button size="sm" variant="outline">
+                                <Button size="sm" variant="outline" className="bg-zinc-50 text-zinc-950">
                                   <Copy className="w-3 h-3 mr-1" />
                                   Copy Link
                                 </Button>
@@ -181,7 +181,7 @@ const BadgesSharing = () => {
 
             {/* Sidebar */}
             <div className="space-y-6">
-              <Card>
+              <Card className="bg-lime-500 border-2 border-black ">
                 <CardHeader>
                   <CardTitle>Badge Progress</CardTitle>
                 </CardHeader>
@@ -199,7 +199,7 @@ const BadgesSharing = () => {
                 </CardContent>
               </Card>
 
-              <Card>
+              <Card className="bg-lime-500 border-2 border-black ">
                 <CardHeader>
                   <CardTitle>Community Impact</CardTitle>
                 </CardHeader>
@@ -219,21 +219,21 @@ const BadgesSharing = () => {
                 </CardContent>
               </Card>
 
-              <Card>
+              <Card className="bg-lime-500 border-2 border-black ">
                 <CardHeader>
                   <CardTitle>Success Stories</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <div className="space-y-3">
-                    <div className="p-3 bg-muted rounded-lg">
-                      <p className="text-sm">"CareerCanvas helped me land my dream internship at Google!"</p>
+                    <div className="p-3 rounded-lg bg-lime-200">
+                      <p className="text-sm font-medium">"CareerCanvas helped me land my dream internship at Google!"</p>
                       <p className="text-xs mt-1 text-zinc-950">- Sarah M.</p>
                     </div>
-                    <div className="p-3 bg-muted rounded-lg">
-                      <p className="text-sm">"The AI resume builder got me 3x more interviews!"</p>
+                    <div className="p-3 rounded-lg bg-lime-200">
+                      <p className="text-sm font-medium">"The AI resume builder got me 3x more interviews!"</p>
                       <p className="text-xs mt-1 text-zinc-950">- Alex K.</p>
                     </div>
-                    <Button variant="outline" size="sm" className="w-full">
+                    <Button variant="outline" size="sm" className="w-full text-zinc-950 bg-zinc-50">
                       <Users className="w-4 h-4 mr-2" />
                       View All Stories
                     </Button>
@@ -241,7 +241,7 @@ const BadgesSharing = () => {
                 </CardContent>
               </Card>
 
-              <Card>
+              <Card className="bg-lime-500 border-2 border-black ">
                 <CardHeader>
                   <CardTitle>Viral Challenge</CardTitle>
                 </CardHeader>
