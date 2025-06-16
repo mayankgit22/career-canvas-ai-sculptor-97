@@ -37,7 +37,7 @@ const ContentCreator = () => {
       <div className="container mx-auto px-4 py-8 bg-gray-50">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-8">
-            <h1 className="text-3xl font-bold mb-4 text-zinc-950">Content Creator</h1>
+            <h1 className="font-bold mb-4 text-zinc-950 text-4xl">Content Creator</h1>
             <p className="text-lime-500 font-semibold text-2xl">
               Generate tailored resumes, cover letters, and portfolios for your target opportunities
             </p>
@@ -45,7 +45,7 @@ const ContentCreator = () => {
 
           <Tabs defaultValue="resume" className="space-y-8">
             <TabsList className="grid w-full grid-cols-3">
-              <TabsTrigger value="resume" className="text-zinc-950 bg-lime-600 hover:bg-lime-500">Resume/CV Builder</TabsTrigger>
+              <TabsTrigger value="resume" className="text-zinc-950 bg-lime-500 hover:bg-lime-400">Resume/CV Builder</TabsTrigger>
               <TabsTrigger value="portfolio" className="text-zinc-950 bg-lime-500 hover:bg-lime-400 mr-2 ml-2">Portfolio Creator</TabsTrigger>
               <TabsTrigger value="cover-letter" className="text-zinc-950 bg-lime-500 hover:bg-lime-400">Cover Letter</TabsTrigger>
             </TabsList>
@@ -55,13 +55,13 @@ const ContentCreator = () => {
               <div className="grid lg:grid-cols-3 gap-8">
                 {/* Configuration Panel */}
                 <div className="lg:col-span-1 space-y-6">
-                  <Card>
+                  <Card className="bg-lime-500">
                     <CardHeader>
                       <CardTitle>Target Opportunity</CardTitle>
                     </CardHeader>
                     <CardContent>
-                      <div className="space-y-3">
-                        {opportunities.map(opp => <div key={opp.id} className={`p-3 rounded-lg border cursor-pointer transition-colors ${selectedOpportunity === opp.id ? "border-primary bg-primary/5" : "border-border hover:bg-muted"}`} onClick={() => setSelectedOpportunity(opp.id)}>
+                      <div className="space-y-3 bg-lime-500">
+                        {opportunities.map(opp => <div key={opp.id} onClick={() => setSelectedOpportunity(opp.id)} className="">
                             <div className="flex items-center justify-between">
                               <div>
                                 <p className="font-medium text-sm">{opp.title}</p>
@@ -76,7 +76,7 @@ const ContentCreator = () => {
                     </CardContent>
                   </Card>
 
-                  <Card>
+                  <Card className="bg-lime-500">
                     <CardHeader>
                       <CardTitle>Resume Template</CardTitle>
                     </CardHeader>
@@ -90,24 +90,24 @@ const ContentCreator = () => {
                     </CardContent>
                   </Card>
 
-                  <Card>
+                  <Card className="bg-lime-500">
                     <CardHeader>
                       <CardTitle>ATS Score</CardTitle>
                     </CardHeader>
                     <CardContent>
                       <div className="text-center">
-                        <div className="text-3xl font-bold text-green-600 mb-2">94%</div>
+                        <div className="text-3xl font-bold text-green-600 mb-2 bg-slate-50 rounded-xl">94%</div>
                         <p className="text-sm text-zinc-950">ATS Compatibility</p>
                         <div className="mt-4 space-y-2">
-                          <div className="flex items-center gap-2 text-sm">
+                          <div className="flex items-center gap-2 text-sm text-black ">
                             <CheckCircle className="w-4 h-4 text-green-600" />
                             Keywords optimized
                           </div>
-                          <div className="flex items-center gap-2 text-sm">
+                          <div className="flex items-center gap-2 text-sm text-black ">
                             <CheckCircle className="w-4 h-4 text-green-600" />
                             Format compatible
                           </div>
-                          <div className="flex items-center gap-2 text-sm">
+                          <div className="flex items-center gap-2 text-sm text-black ">
                             <CheckCircle className="w-4 h-4 text-green-600" />
                             Skills aligned
                           </div>
@@ -119,23 +119,23 @@ const ContentCreator = () => {
 
                 {/* Resume Preview */}
                 <div className="lg:col-span-2">
-                  <Card>
-                    <CardHeader>
+                  <Card className="bg-lime-500">
+                    <CardHeader className="bg-lime-500">
                       <div className="flex items-center justify-between">
                         <CardTitle>Resume Preview</CardTitle>
                         <div className="flex gap-2">
-                          <Button variant="outline" size="sm">
+                          <Button variant="outline" size="sm" className="text-zinc-950 bg-indigo-600 hover:bg-indigo-500 border-2 border-black  ">
                             <Edit3 className="w-4 h-4 mr-2" />
                             Edit
                           </Button>
-                          <Button variant="outline" size="sm">
+                          <Button variant="outline" size="sm" className="text-zinc-950 bg-indigo-600 hover:bg-indigo-500 border-2 border-black py-0">
                             <Palette className="w-4 h-4 mr-2" />
                             Style
                           </Button>
                         </div>
                       </div>
                     </CardHeader>
-                    <CardContent>
+                    <CardContent className="bg-lime-500">
                       <div className="bg-white border rounded-lg p-8 shadow-sm min-h-[600px]">
                         {/* Resume Content */}
                         <div className="space-y-6">
