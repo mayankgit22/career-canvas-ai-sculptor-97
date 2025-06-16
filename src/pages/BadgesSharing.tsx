@@ -149,7 +149,7 @@ const BadgesSharing = () => {
                 <CardContent>
                   <div className="space-y-4">
                     {shareableContent.map((content, index) => <Card key={index} className="hover:shadow-lg transition-shadow bg-lime-300">
-                        <CardContent className="p-4">
+                        <CardContent className="p-3 bg-lime-200 border-2 border-black rounded-xl">
                           <div className="flex gap-4">
                             <div className="w-20 h-16 rounded-lg flex items-center justify-center bg-amber-950">
                               <FileText className="w-6 h-6 text-muted-foreground" />
