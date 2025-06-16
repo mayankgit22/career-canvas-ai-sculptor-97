@@ -48,7 +48,7 @@ export const Navigation = () => {
         </nav>
 
         <div className="hidden md:flex items-center space-x-4">
-          <Button variant="outline" size="sm">Sign In</Button>
+          <Button variant="outline" size="sm" className="bg-lime-500 hover:bg-lime-400">Sign In</Button>
           <Button size="sm" className="gradient-bg">Get Started</Button>
         </div>
 

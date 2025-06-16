@@ -68,15 +68,15 @@ const Dashboard = () => {
                 <CardTitle className="text-lg text-zinc-950">Quick Actions</CardTitle>
               </CardHeader>
               <CardContent className="space-y-3">
-                <Button className="w-full" variant="outline">
+                <Button variant="outline" className="w-full bg-lime-500 hover:bg-lime-400">
                   <FileText className="w-4 h-4 mr-2" />
                   Build Resume
                 </Button>
-                <Button className="w-full" variant="outline">
+                <Button variant="outline" className="w-full bg-lime-500 hover:bg-lime-400">
                   <Target className="w-4 h-4 mr-2" />
                   Create Portfolio
                 </Button>
-                <Button className="w-full" variant="outline">
+                <Button variant="outline" className="w-full bg-lime-500 hover:bg-lime-400">
                   <Share2 className="w-4 h-4 mr-2" />
                   Share Profile
                 </Button>
@@ -162,7 +162,7 @@ const Dashboard = () => {
               </CardHeader>
               <CardContent>
                 <div className="space-y-3">
-                  {tips.map((tip, index) => <div key={index} className="flex items-start space-x-3 p-3 bg-muted rounded-lg">
+                  {tips.map((tip, index) => <div key={index} className="flex items-start space-x-3 p-3 rounded-lg bg-lime-500">
                       <div className="w-2 h-2 bg-brand-blue rounded-full mt-2"></div>
                       <p className="text-sm">{tip}</p>
                     </div>)}
@@ -179,7 +179,7 @@ const Dashboard = () => {
                     <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-muted-foreground" />
                     <Input placeholder="Search opportunities..." value={searchTerm} onChange={e => setSearchTerm(e.target.value)} className="pl-10 bg-slate-500" />
                   </div>
-                  <Button variant="outline">
+                  <Button variant="outline" className="bg-zinc-50">
                     <Filter className="w-4 h-4 mr-2" />
                     Filters
                   </Button>
@@ -187,7 +187,7 @@ const Dashboard = () => {
               </CardHeader>
               <CardContent>
                 <div className="space-y-4">
-                  {opportunities.map((opp, index) => <Card key={index} className="hover:shadow-lg transition-shadow">
+                  {opportunities.map((opp, index) => <Card key={index} className="hover:shadow-lg transition-shadow bg-lime-500">
                       <CardContent className="p-6">
                         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
                           <div className="space-y-2">
