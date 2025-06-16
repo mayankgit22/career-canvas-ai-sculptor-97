@@ -207,18 +207,18 @@ const ContentCreator = () => {
             {/* Portfolio Creator */}
             <TabsContent value="portfolio" className="space-y-6">
               <div className="grid lg:grid-cols-2 gap-8">
-                <Card>
+                <Card className="bg-lime-500">
                   <CardHeader className="bg-transparent">
                     <CardTitle className="text-zinc-950">Portfolio Microsite</CardTitle>
                   </CardHeader>
                   <CardContent className="space-y-4">
-                    <div className="bg-muted p-4 rounded-lg">
+                    <div className="p-4 rounded-lg bg-lime-300">
                       <h3 className="font-semibold mb-2">Your Portfolio URL</h3>
                       <div className="flex items-center gap-2">
                         <code className="text-sm px-2 py-1 rounded bg-slate-300">
                           https://careercanvas.dev/john-doe
                         </code>
-                        <Button size="sm" variant="outline">
+                        <Button size="sm" variant="outline" className="text-zinc-950 bg-white">
                           <Share2 className="w-4 h-4" />
                         </Button>
                       </div>
@@ -246,7 +246,7 @@ const ContentCreator = () => {
                   </CardContent>
                 </Card>
 
-                <Card>
+                <Card className="bg-lime-500">
                   <CardHeader>
                     <CardTitle className="text-zinc-950">Portfolio Preview</CardTitle>
                   </CardHeader>
