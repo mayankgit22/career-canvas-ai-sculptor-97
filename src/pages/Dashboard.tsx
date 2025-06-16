@@ -7,6 +7,7 @@ import { Progress } from "@/components/ui/progress";
 import { Input } from "@/components/ui/input";
 import { Search, Filter, MapPin, Calendar, ExternalLink, TrendingUp, Target, FileText, Share2, Award } from "lucide-react";
 import { RadarChart } from "@/components/RadarChart";
+
 const Dashboard = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const opportunities = [{
@@ -35,7 +36,7 @@ const Dashboard = () => {
     description: "$5,000 scholarship for students in computer science."
   }];
   const tips = ["Add your hackathon project to boost your profile!", "Python skills are in high demand - showcase your projects", "Your communication skills match 95% of leadership roles"];
-  return <div className="min-h-screen bg-background">
+  return <div className="min-h-screen bg-white">
       <Navigation />
       
       <div className="container mx-auto px-4 py-8 bg-white">
@@ -230,4 +231,5 @@ const Dashboard = () => {
       </div>
     </div>;
 };
+
 export default Dashboard;

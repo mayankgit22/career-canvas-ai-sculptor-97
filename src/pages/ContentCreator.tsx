@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { FileText, Download, Share2, Eye, Edit3, Palette, Target, CheckCircle, Globe } from "lucide-react";
+
 const ContentCreator = () => {
   const [selectedOpportunity, setSelectedOpportunity] = useState("google-internship");
   const opportunities = [{
@@ -31,7 +32,7 @@ const ContentCreator = () => {
     name: "Business",
     description: "Professional for business roles"
   }];
-  return <div className="min-h-screen bg-background">
+  return <div className="min-h-screen bg-white">
       <Navigation />
       
       <div className="container mx-auto px-4 py-8 bg-gray-50 text-black">
@@ -330,4 +331,5 @@ const ContentCreator = () => {
       </div>
     </div>;
 };
+
 export default ContentCreator;
