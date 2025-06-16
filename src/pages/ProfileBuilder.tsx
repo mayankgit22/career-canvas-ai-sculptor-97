@@ -76,7 +76,7 @@ const ProfileBuilder = () => {
                       const Icon = section.icon;
                       return <div key={index} className="flex items-center gap-3">
                             <div className={`w-8 h-8 rounded-full flex items-center justify-center ${section.completed ? "bg-green-100 text-green-600" : "bg-muted text-muted-foreground"}`}>
-                              {section.completed ? <CheckCircle className="w-4 h-4" /> : <Icon className="w-4 h-4" />}
+                              {section.completed ? <CheckCircle className="w-4 h-4 bg-transparent" /> : <Icon className="w-4 h-4" />}
                             </div>
                             <span className="">
                               {section.name}
@@ -88,7 +88,7 @@ const ProfileBuilder = () => {
                 </CardContent>
               </Card>
 
-              <Card className="border-2 border-black ">
+              <Card className="border-2 border-black bg-lime-500">
                 <CardHeader>
                   <CardTitle>Quick Import</CardTitle>
                 </CardHeader>
