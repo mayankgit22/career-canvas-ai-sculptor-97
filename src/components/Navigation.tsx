@@ -26,7 +26,7 @@ export const Navigation = () => {
     label: "Badges",
     icon: Award
   }];
-  return <header className="border-b border-border/40 backdrop-blur-sm sticky top-0 z-50 bg-white w-full py-4">
+  return <header className="border-b border-border/40 backdrop-blur-sm sticky top-0 z-50 w-full py-4 bg-lime-500">
       <div className="flex items-center justify-between px-4">
         <Link to="/" className="flex items-center space-x-2">
           <div className="w-8 h-8 gradient-bg rounded-lg flex items-center justify-center">
@@ -40,9 +40,9 @@ export const Navigation = () => {
           {navItems.map(item => {
           const Icon = item.icon;
           const isActive = location.pathname === item.path;
-          return <Link key={item.path} to={item.path} className={`flex items-center space-x-1 px-3 py-2 rounded-lg transition-colors ${isActive ? "bg-primary text-primary-foreground" : "text-muted-foreground hover:text-foreground hover:bg-muted"}`}>
+          return <Link key={item.path} to={item.path} className="flex gap-1 items-center text-white py-0 mx-[11px] my-0 px-[11px]">
                 <Icon className="w-4 h-4" />
-                <span className="text-zinc-950 font-semibold text-base">{item.label}</span>
+                <span className="text-zinc-950 font-semibold text-base px-px">{item.label}</span>
               </Link>;
         })}
         </nav>

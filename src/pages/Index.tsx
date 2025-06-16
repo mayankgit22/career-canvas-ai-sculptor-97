@@ -17,7 +17,7 @@ const Index = () => {
 
       {/* Hero Section */}
       <section className="py-20 px-4 gradient-bg text-white relative overflow-hidden">
-        <div className="absolute inset-0 absolute bg-slate-50 border-b-2 border-black "></div>
+        <div className="absolute inset-0 absolute bg-slate-50 border-b-2 border-black px-0"></div>
         <div className="container mx-auto relative z-10">
           <div className="text-center max-w-4xl mx-auto bg-transparent ">
             <Badge className="mb-6 text-white border-white/30 bg-slate-950">
