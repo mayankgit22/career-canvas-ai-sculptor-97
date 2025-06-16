@@ -40,9 +40,9 @@ export const Navigation = () => {
           {navItems.map(item => {
           const Icon = item.icon;
           const isActive = location.pathname === item.path;
-          return <Link key={item.path} to={item.path} className="flex gap-1 items-center text-white py-0 mx-[11px] my-0 px-[11px]">
+          return <Link key={item.path} to={item.path} className="flex gap-1 items-center text-white py-0 mx-[11px] px-[11px] my-[11px] hover:text-white">
                 <Icon className="w-4 h-4" />
-                <span className="text-zinc-950 font-semibold text-base px-px">{item.label}</span>
+                <span className="text-zinc-950 font-semibold text-base px-px hover:text-white ">{item.label}</span>
               </Link>;
         })}
         </nav>
