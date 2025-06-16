@@ -34,7 +34,7 @@ const ContentCreator = () => {
   return <div className="min-h-screen bg-background">
       <Navigation />
       
-      <div className="container mx-auto px-4 py-8 bg-gray-50">
+      <div className="container mx-auto px-4 py-8 bg-gray-50 text-black">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-8">
             <h1 className="font-bold mb-4 text-zinc-950 text-4xl">Content Creator</h1>
@@ -271,7 +271,7 @@ const ContentCreator = () => {
 
             {/* Cover Letter */}
             <TabsContent value="cover-letter" className="space-y-6">
-              <Card>
+              <Card className="bg-lime-500">
                 <CardHeader>
                   <CardTitle>AI-Generated Cover Letter</CardTitle>
                 </CardHeader>
@@ -313,11 +313,11 @@ const ContentCreator = () => {
                       <Download className="w-4 h-4 mr-2" />
                       Download
                     </Button>
-                    <Button variant="outline">
+                    <Button variant="outline" className="bg-white border-2 border-black text-black ">
                       <Edit3 className="w-4 h-4 mr-2" />
                       Edit
                     </Button>
-                    <Button variant="outline">
+                    <Button variant="outline" className="bg-white border-2 border-black text-black ">
                       <Target className="w-4 h-4 mr-2" />
                       Regenerate
                     </Button>
