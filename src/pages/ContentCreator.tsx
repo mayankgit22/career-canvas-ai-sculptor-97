@@ -189,11 +189,11 @@ const ContentCreator = () => {
                           <Download className="w-4 h-4 mr-2" />
                           Download PDF
                         </Button>
-                        <Button variant="outline" className="bg-white text-black ">
+                        <Button variant="outline" className="bg-white text-black border-2 border-black ">
                           <Share2 className="w-4 h-4 mr-2" />
                           Share Resume
                         </Button>
-                        <Button variant="outline" className="bg-white text-black ">
+                        <Button variant="outline" className="bg-white text-black border-2 border-black ">
                           <Eye className="w-4 h-4 mr-2" />
                           Preview
                         </Button>
